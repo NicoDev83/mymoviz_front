@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Popover, Button } from 'antd';
+// import { Popover, Button } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import Movie from './Movie';
@@ -66,9 +66,9 @@ function Home() {
           <img src="logo.png" alt="Logo" />
           <img className={styles.logo} src="logoletter.png" alt="Letter logo" />
         </div>
-        <Popover title="Liked movies" content={popoverContent} className={styles.popover} trigger="click">
+        {/* <Popover title="Liked movies" content={popoverContent} className={styles.popover} trigger="click">
           <Button>♥ {likedMovies.length} movie(s)</Button>
-        </Popover>
+        </Popover> */}
       </div>
       <div className={styles.title}>LAST RELEASES</div>
       <div className={styles.moviesContainer}>
