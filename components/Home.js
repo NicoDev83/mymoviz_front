@@ -43,7 +43,7 @@ function Home() {
       .then((data) => {
         console.log(data);
         const formatedData = data.movies.map((movie) => {
-          const poster = https://image.tmdb.org/t/p/w500/${movie.poster_path};
+          const poster = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
           let overview = movie.overview;
           if (overview.length > 250) {
             overview = overview.substring(0, 250) + "...";
