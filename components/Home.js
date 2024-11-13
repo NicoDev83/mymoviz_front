@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import { Popover, Button } from 'antd';
+import { Popover, Button } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import Movie from './Movie';
@@ -36,12 +36,13 @@ function Home() {
 
   // Movies list
   useEffect(() => {
-    fetch('http://localhost:3000/movies')
+    fetch('https://mymoviz-backend-v2.vercel.app/movies')
       .then(response => response.json())
       .then(data => {
         setMoviesList(data.movies);
       });
   }, [])
+
   
   // [
   //   { title: 'Forrest Gump', poster: 'forrestgump.jpg', voteAverage: 9.2, voteCount: 22_705, overview: 'A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case.' },
@@ -65,9 +66,9 @@ function Home() {
           <img src="logo.png" alt="Logo" />
           <img className={styles.logo} src="logoletter.png" alt="Letter logo" />
         </div>
-        {/* <Popover title="Liked movies" content={popoverContent} className={styles.popover} trigger="click">
+        <Popover title="Liked movies" content={popoverContent} className={styles.popover} trigger="click">
           <Button>♥ {likedMovies.length} movie(s)</Button>
-        </Popover> */}
+        </Popover>
       </div>
       <div className={styles.title}>LAST RELEASES</div>
       <div className={styles.moviesContainer}>
